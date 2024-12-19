@@ -1,4 +1,4 @@
-# Vue 2 + Node.js Project Setup
+# Vue 3 + Node.js Project Setup
 
 This README provides a comprehensive guide for setting up, managing, and troubleshooting your Vue 2 and Node.js project. Follow these steps to ensure a smooth development process.
 
