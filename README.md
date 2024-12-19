@@ -178,7 +178,7 @@ npm run build
 ---
 
 ### **Contributors**
-- **Your Name** - Project Owner/Developer.
+- **KIRO-M12** - Project Owner/Developer.
 
 For questions or issues, feel free to contact via [GitHub Issues](<repository_url>/issues).
 
