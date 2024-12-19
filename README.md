@@ -1,6 +1,6 @@
 # Vue 3 + Node.js Project Setup
 
-This README provides a comprehensive guide for setting up, managing, and troubleshooting your Vue 2 and Node.js project. Follow these steps to ensure a smooth development process.
+This README provides a comprehensive guide for setting up, managing, and troubleshooting your Vue 3 and Node.js project. Follow these steps to ensure a smooth development process.
 
 ---
 
@@ -39,7 +39,7 @@ This README provides a comprehensive guide for setting up, managing, and trouble
 ### 1. Clone the Repository
 ```bash
 git clone <repository_url>
-cd vue-2-nodejs
+cd vue-3-nodejs
 ```
 
 ### 2. Install Dependencies
@@ -57,6 +57,7 @@ npm install
    ```bash
    npm audit fix --force
    ```
+
 #### Resolve Webpack Compatibility:
    - Ensure `webpack-dev-middleware` matches your `webpack` version.
    - For Webpack 4:
@@ -65,7 +66,7 @@ npm install
      ```
    - For Webpack 5:
      ```bash
-     npm install webpack-dev-middleware@7.4.2 --save-dev
+     npm install webpack-dev-middleware@5.3.3 --save-dev
      ```
 
 ---
@@ -74,10 +75,10 @@ npm install
 
 ### Run the Development Server
 ```bash
-npm run serve
+npm run dev
 ```
 - Starts the Vue.js development server.
-- Access the app in the browser: `http://localhost:8080`
+- Access the app in the browser: `http://localhost:5173` (default Vite port).
 
 ### Lint Your Code
 ```bash
@@ -94,6 +95,12 @@ npm run build
 ```
 - Bundles the app for deployment in the `/dist` directory.
 
+### Preview the Build
+```bash
+npm run preview
+```
+- Serve the production build locally.
+
 ---
 
 ## **Common Issues & Fixes**
@@ -107,7 +114,7 @@ npm run build
 ### **2. Webpack Loader Errors**
 - If `NormalModule` errors occur, ensure compatible loaders:
   ```bash
-  npm install vue-loader@16.8.3 --save-dev
+  npm install vue-loader@17.0.0 --save-dev
   ```
 
 ### **3. Node.js Version Compatibility**
@@ -128,21 +135,18 @@ npm run build
   ```json
   "dependencies": {
     "axios": "^1.7.9",
+    "express": "^4.21.2",
     "cors": "^2.8.5",
-    "express": "^4.21.2"
+    "vue": "^3.2.47"
   },
   "devDependencies": {
-    "@babel/core": "^7.26.0",
-    "@vue/cli-plugin-babel": "^4.5.19",
-    "@vue/cli-plugin-eslint": "^4.5.19",
-    "@vue/cli-service": "^4.5.19",
-    "eslint": "^6.8.0",
-    "vue": "^2.6.14",
-    "vue-template-compiler": "^2.6.14"
+    "@vitejs/plugin-vue": "^4.0.0",
+    "eslint": "^8.50.0",
+    "vite": "^4.4.0"
   }
   ```
 
-### Updating Webpack
+### Updating Webpack (Optional for Legacy Builds)
 1. For Webpack 4:
    ```bash
    npm install webpack@4.47.0 --save-dev
@@ -152,28 +156,21 @@ npm run build
    npm install webpack@5.97.1 --save-dev
    ```
 
-### Fixing ESLint Version Conflicts
-- Upgrade ESLint for compatibility:
-  ```bash
-  npm install eslint@7.32.0 --save-dev
-  ```
-- Adjust `eslint` rules in `.eslintrc.js`.
-
 ---
 
 ## **Next Steps**
 
 1. Set up CI/CD pipelines for deployment.
-2. Integrate unit testing with Jest or Mocha.
-3. Optimize production builds with additional Webpack plugins.
+2. Integrate unit testing with Jest or Vitest.
+3. Optimize production builds with additional Vite plugins.
 4. Document custom configurations for future maintainers.
 
 ---
 
 ### **Changelog**
-- Initial setup with Vue 2 and Node.js.
+- Initial setup with Vue 3 and Node.js.
 - Dependencies updated for security and compatibility.
-- Configured Webpack and ESLint.
+- Configured ESLint and Vite.
 
 ---
 
